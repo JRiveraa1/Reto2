@@ -25,24 +25,24 @@ public class Reto2 {
     }
    
     public static void Punto2(){
-        int n, m;
-        Scanner leer = new Scanner(System.in);
-        System.out.print("Ingrese un número entero: ");
-        n = leer.nextInt();
-        for(int i = 1;i <= n;i++){
-            int counter = -1;
-            for(int j = 1;j <= i;j++){
-                counter = counter + 2;
-                if(j<i){
-                    System.out.print(counter + " + ");
-                }
-                else{
-                    System.out.print(counter + " = " );
-                }
-            }
-            System.out.println(i + "^2" + " = " + Math.pow(i, 2));
-            
+        Scanner Entrada = new Scanner (System.in);
+        int n;
+        int impares;
+        int cuadrado= 0;
+        impares = 1;
+        String procedimiento; 
+        procedimiento ="";
+        System.out.print("Ingrese un numero");
+        n = Entrada.nextInt();
+        System.out.println("numeros impares que sumados calculan el cuadrado de los n primeros numeros");
+        for(int i=1; i<=n; i++){
+            System.out.print(impares+" + ");
+            cuadrado = cuadrado+impares;
+            procedimiento= procedimiento+ impares;
+            impares= impares+2;
         }
+        System.out.println("=" + cuadrado);      
+        System.out.println(n+" elevado al cuadrado es "+cuadrado);
     }
      
     public static void Punto3(){
@@ -50,15 +50,15 @@ public class Reto2 {
         Scanner leer = new Scanner(System.in);
         System.out.print("Ingrese un número entero: ");
         n = leer.nextInt();
-        int counter = -1;
+        int odd = -1;
         for(int i = 1;i <= n;i++){
             for(int j = 1;j <= i;j++){
-                counter = counter + 2;
+                odd = odd + 2;
                 if(j<i){
-                    System.out.print(counter + " + ");
+                    System.out.print(odd + " + ");
                 }
                 else{
-                    System.out.print(counter + " = ");
+                    System.out.print(odd + " = ");
                 }
             }
             System.out.println(i + "^3" + " = " + Math.pow(i, 3));
